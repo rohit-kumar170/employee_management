@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% block body %}
+<div class="container">
+  <h1>Add an Empoyee</h1>
+  <hr />
+  <form action="/add_emp" method="post">
+    {% csrf_token %}
+    <div class="col-md-4">
+      <label for="first_name" class="form-label">First Name</label>
+      <input
+        type="text"
+        id="first_name"
+        class="form-control"
+        name="first_name"
+      />
+      <label for="last_name" class="form-label">Last Name</label>
+      <input type="text" id="last_name" class="form-control" name="last_name" />
+      <label for="department" class="form-label">Department</label>
+      <input
+        type="number"
+        id="department"
+        class="form-control"
+        name="department"
+      />
+      <label for="location" class="form-label">location</label>
+      <input type="text" id="location" class="form-control" name="location" />
+      <label for="salary" class="form-label">Salary</label>
+      <input type="number" id="salary" class="form-control" name="salary" />
+      <label for="bonus" class="form-label">Bonus</label>
+      <input type="number" id="bonus" class="form-control" name="bonus" />
+      <label for="role" class="form-label">Role</label>
+      <input type="number" id="role" class="form-control" name="role" />
+      <label for="phone" class="form-label">Phone</label>
+      <input type="number" id="phone" class="form-control" name="phone" />
+      <hr />
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

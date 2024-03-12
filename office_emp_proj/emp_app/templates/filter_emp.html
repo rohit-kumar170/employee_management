@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block body %}
+<div class="container">
+  <h1>Filter Empoyee Details</h1>
+  <hr />
+  <form action="/filter_emp" method="post">
+    {% csrf_token %}
+    <div class="col-md-4">
+      <label for="first_name" class="form-label">First Name/Last Name</label>
+      <input type="text" id="first_name" class="form-control" name="name" />
+      <label for="department" class="form-label">Department</label>
+      <input
+        type="text"
+        id="department"
+        class="form-control"
+        name="department"
+      />
+      <label for="role" class="form-label">Role</label>
+      <input type="text" id="role" class="form-control" name="role" />
+      <hr />
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

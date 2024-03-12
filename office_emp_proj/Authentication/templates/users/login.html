@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block body %}
+<div class="row">
+  <div class="col-md-4 offset-md-4">
+    <div class="card">
+      <div class="card-header bg-info text-white">
+        <div class="card-title">Login Page</div>
+      </div>
+      <div class="card-body">
+        <form method="post">
+          {% csrf_token %} {{form.as_p}}
+          <button type="submit" class="btn-info">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
